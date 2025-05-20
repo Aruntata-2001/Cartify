@@ -20,7 +20,7 @@ function Login() {
       storedUser.password === formData.password
     ) {
       localStorage.setItem("isLoggedIn", "true");
-      navigate("Home");
+      navigate("/");
     } else {
       alert("Invalid credentials");
     }

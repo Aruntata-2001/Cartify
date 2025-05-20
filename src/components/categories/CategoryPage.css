@@ -25,12 +25,14 @@
 }
 
 .product-card {
-  background: #fff;
+  background-color: white;
   border: 1px solid #e5e7eb;
   border-radius: 12px;
-  padding: 20px;
+  overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
 }
 
 .product-card:hover {
@@ -38,38 +40,46 @@
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
-.product-card img {
-  width: 100%;
-  border-radius: 8px;
-  margin-bottom: 15px;
+.product-image {
+  height: 180px;
+  background-size: cover;
+  background-position: center;
 }
 
-.product-card h3 {
+.product-info {
+  padding: 15px;
+  text-align: left;
+}
+
+.product-info h3 {
+  font-size: 18px;
   color: #111827;
-  font-size: 20px;
-  margin-bottom: 10px;
+  margin: 0 0 8px;
 }
 
-.product-card p {
+.product-info p {
   font-size: 14px;
-  color: #6b7280;
-  margin-bottom: 15px;
+  color: #4b5563;
+  margin-bottom: 12px;
 }
 
 .product-buttons {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   gap: 10px;
 }
 
-.buy-btn, .cart-btn {
-  padding: 10px 16px;
+.buy-btn,
+.cart-btn {
+  padding: 8px 12px;
   border: none;
   border-radius: 8px;
   cursor: pointer;
   font-weight: 500;
   font-size: 14px;
   transition: background-color 0.3s ease;
+  width: 50%;
+  text-align: center;
 }
 
 .buy-btn {
@@ -89,10 +99,28 @@
 .cart-btn:hover {
   background-color: #fbbf24;
 }
-.product-card .price {
-  font-size: 18px;
-  color: #111827;
-  font-weight: bold;
-  margin-top: 10px;
+
+/* Image classes with public folder paths */
+.smartphone-card .product-image {
+  background-image: url('/src/Images/smartphones.jpeg');
 }
 
+.laptop-card .product-image {
+  background-image: url('/src/Images/laptop.jpeg');
+}
+
+.tv-card .product-image {
+  background-image: url('/src/Images/tv.jpg');
+}
+
+.headphones-card .product-image {
+  background-image: url('/src/Images/headphones.jpg');
+}
+
+.speaker-card .product-image {
+  background-image: url('/src/Images/speakers.jpg');
+}
+
+.watch-card .product-image {
+  background-image: url('/src/Images/watch.jpg');
+}
